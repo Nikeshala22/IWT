@@ -1,0 +1,195 @@
+
+/*Scroll button*/
+.to-top {
+   background: white;
+   position: fixed;
+   bottom: 16px;
+   right:32px;
+   width:50px;
+   height:50px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size:32px;
+   color:#1f1f1f;
+   text-decoration: none; 
+   opacity:0;
+   pointer-events: none;
+   transition: all .4s;
+ }
+ 
+ .to-top.active {
+   bottom:32px;
+   pointer-events: auto;
+   opacity:1;
+ }
+ 
+/*content syles*/
+ h1{
+   text-align: center;
+   color: white;
+   font-size: 47px;
+   font-weight: bold;
+   background-color: gray;
+
+}
+
+h2{
+   font-weight: bold;
+   font-family: "Times New Roman", Times, serif;
+}
+
+ #p1{
+   text-align: left;
+   font-size: 15px;
+   color: black;
+   margin-left: 50px;
+   font-family: "Times New Roman", Times, serif;
+ }
+ 
+ .content{
+   text-align: left;
+   margin-left: 50px;
+   font-size: 15px;
+   color: #000000;
+   font-family: "Times New Roman", Times, serif;
+ }
+ .footer{
+   margin-top: 200px;
+   background-color: var(--black);
+}
+
+.footer .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: space-between;
+}
+
+.footer .flex .box{
+   flex: 1 1 30rem;
+}
+
+.footer .flex .box a{
+   display: block;
+   padding: 1rem 0;
+   font-size: 1.8rem;
+}
+
+.footer .flex .box a span{
+   color: var(--white);
+}
+
+.footer .flex .box a:hover span{
+   text-decoration: underline;
+}
+
+.footer .flex .box a i{
+   color: rgb(134, 134, 237);
+}
+
+.footer .flex .box:last-child{
+   text-align: right;
+}
+
+.footer .flex .box:last-child a i{
+   margin-left: 1.5rem;
+}
+
+.footer .flex .box:first-child a i{
+   margin-right: 1.5rem;
+}
+
+.footer .flex .box:nth-child(2){
+   text-align: center;
+}
+
+.footer .credit{
+   padding: 3rem 2rem;
+   text-align: center;
+   border-top: var(--border);
+   font-size: 2rem;
+   color: var(--white);
+   margin-top: 2rem;
+   /* padding-bottom: 10rem; */
+}
+
+.footer .credit span{
+   color: var(--main-color);
+}
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .navbar .menu{
+      position: absolute;
+      top: 99%; left: 0; right: 0;
+      background-color: var(--white);
+      border-top: var(--border);
+      transition: .2s linear;
+      z-index:1;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .navbar .menu.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .navbar .menu ul li{
+      width: 100%;
+      position: relative;
+   }
+
+   .header .navbar .menu ul li a{
+      width: 100%;
+   }
+
+   .header .navbar .menu ul li ul{
+      position: relative;
+      width: 100%;
+   }
+
+   .header .navbar .menu ul li ul li a{
+      padding-left: 4rem;
+      background-color: var(--black);
+      color: var(--white);
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .header .navbar .flex .logo{
+      font-size: 1.8rem;
+   }
+
+   .home .center form .flex{
+      gap: 0;
+   }
+
+   .listings .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .reviews .box-container{
+      grid-template-columns: 1fr;
+   }
+
+}

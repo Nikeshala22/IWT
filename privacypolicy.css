@@ -1,0 +1,85 @@
+/* Reset */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* Global styles */
+body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   background-color: #f7f7f7;
+   color: #333;
+}
+
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* Header styles */
+h1 {
+   text-align: center;
+   margin-bottom: 20px;
+   color: #333;
+}
+
+/* Section styles */
+h3 {
+   margin-top: 30px;
+   color: #555;
+}
+
+p {
+   margin-bottom: 20px;
+}
+
+/* Image styles */
+.center {
+   display: block;
+   margin: 0 auto;
+}
+
+/* Link styles */
+a {
+   color: #007bff;
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+/* Button styles */
+.button {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.button:hover {
+   background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+   text-align: center;
+   margin-top: 50px;
+   padding-top: 20px;
+   border-top: 1px solid #ccc;
+   color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+   .container {
+       padding: 10px;
+   }
+}
+
