@@ -1,0 +1,526 @@
+body {
+    background-image: url("img/b_pic11.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.btn{
+    background-color: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.40);
+    backdrop-filter:  blur(5px);/* Apply a blur effect to the backdrop behind the element */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.40);
+    text-transform: capitalize;
+    color:#da6285;
+    padding:.8rem 2rem;
+    border-radius: 1.5rem;
+    font-size:20px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.btn::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 0;
+    border-radius: 30px;
+    background-color:#da6285;
+    z-index: -1; /* Place the pseudo-element behind its parent element */
+    transition: width 0.3s ease;/* Apply transition effect on width property */
+    text-align: center;
+
+}
+
+.btn:hover::before{
+    width : 100%;/* Set the width of the ::before pseudo-element to 100% when hovered over */
+}
+.btn:hover{
+    color:#fff;/* Change the text color to white when hovered over */
+}
+.empty{
+    background-color: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.40);
+    backdrop-filter:  blur(5px);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.40);
+    text-transform: capitalize;
+    color:#da6285;
+    padding:1.5rem;
+    text-align:center;
+    margin: 2rem auto;
+
+}
+.empty p{
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+input[type='submit']{
+    cursor: pointer;
+}
+input[type='submit']:hover{
+    color: #da6285;
+}
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax( 30rem, 1fr));
+    align-items: center;
+
+}
+.box-container.box{
+    background-color: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.40);
+    backdrop-filter:  blur(5px);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.40);
+    margin: 1rem;
+    border-radius: .5rem;
+
+}
+
+.flexx-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.flexx-btn.btn{
+    margin: .5rem;
+}
+::-webkit-scrollbar-thumb{
+    --webkit-border-radius: 20px;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #ff8e9d;
+    position: relative;
+
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+    --webkit-border-radius: 20px;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.error_message{
+    margin:10px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding:10px;
+    text-align: center;
+    background-color:#F2DEDE;
+    color:#A94442;
+    font-size: 20px;
+}
+
+.success_msg {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #DFF2BF;
+    color: #270;
+    font-size: 20px;
+}
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4% 0;
+    position: relative;
+}
+.form-container form{
+
+    background-color: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.40);
+    backdrop-filter: blur(5px);
+    box-shadow:  2px 2px 5px rgba(0,0,0,0.40);
+    border-radius: .5rem;
+    padding: 2rem;
+
+}
+.form-container .edit {
+   
+    width: 70rem; 
+    margin: auto; 
+    padding: 2rem; 
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+    border-radius: 0.5rem;
+}
+.form-container form .box {
+    width: 100%; 
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+.form-container form textarea {
+    height: 20rem; 
+    width: 100%;
+    resize: none; 
+}
+
+.form-container .input-field {
+    margin-bottom: 1.5rem; 
+}
+.form-container .edit.img-box{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form-container .edit img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #da6285;
+}
+.form-container form .flexx{
+    display:flex;
+    gap: 2rem;
+}
+.form-container form .flexx.col{
+    flex: 1 1 25rem;
+}
+.form-container form .btn{
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.form-container.add {
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+.form-container.add.img-box{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form-container.add img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #da6285;
+
+}
+
+.form-container form h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #da6285;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+.form-container form p{
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+
+}
+.form-container form p span{
+    color: red;
+}
+.form-container form.link{
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.form-container form.link a{
+    color:#da6285;
+}
+.form-container form.link a:hover{
+    color: #ff8e9d;
+    text-decoration: underline;
+}
+.form-container form .box{
+    background-color: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.40);
+    backdrop-filter: blur(5px);
+    box-shadow:  2px 2px 5px rgba(0,0,0,0.40);
+    width: 100%;
+    border-radius: .5rem;
+    margin: .5rem 0;
+    font-size: 1.3rem;
+    padding: 1rem;
+
+}
+.form-container form textarea{
+    height: 20rem;
+    resize: none;
+}
+.form-container form .btn{
+    width: 100%;
+    font-size: 1.3rem;
+}
+.form-container img.image{
+    height: 40rem;
+    width:100%;
+}
+.post-editor input[type="submit"]
+{
+    width: 49%;
+}
+.post-editor.flexx-btn{
+    width: 45%; 
+    text-align: center;
+    height: 3rem; 
+    margin-top: 0; 
+    font-size: 1rem; 
+    line-height: 3rem;
+    
+}
+.show-post .box-container {
+    margin-right: 20px;
+    gap: 12rem
+}
+
+.show-post .box-container .box {
+    margin-bottom: 20px; 
+    padding: 20px;
+    position: relative;
+    gap: 20px;
+   
+}
+.show-post .box-container .box:hover .image {
+    transform: scale(1.1);
+}
+.show-post .box-container .box img {
+    width: 40rem;
+    height: 30rem;  
+    padding: 10px; 
+    object-fit: cover;
+    position: relative; 
+    background-color: rgb(51, 44, 44); 
+    margin-right: 20px;
+    transition: .5s;
+    
+}
+.show-post .box-container .box .content {
+    width: 40rem;
+    position: relative; 
+    padding: 20px; 
+    background-color: #fff; 
+    
+}
+
+.show-post .box-container .box .content .shape {
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+}
+
+
+.show-post .box-container .box .content .price {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 17%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bolder;
+    background-color: #ff8e9d;
+    color: #fff;
+    z-index: 2;
+    font-size: large;
+}
+.show-post .box-container .box .content .title {
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    text-align: center; 
+    margin-bottom: 1rem; 
+    font-weight: bold; 
+    color: #333;
+ 
+}
+.show-post.box-container.box.posts-content{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+}
+.show-post.box-container.box button{
+    width: 30%;
+
+}
+.post-editor img{
+    width: 100%;
+}
+.form-container .add {
+   
+    width: 70rem; 
+    margin: auto; 
+    padding: 2rem; 
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+    border-radius: 0.5rem;
+}
+.read-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 2rem; 
+}
+
+.read-post .box-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2rem; 
+}
+
+.read-post form {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.read-post form .price {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff; 
+    background-color: #ff8e9d; 
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.read-post form .image {
+    width: 100%;
+    height: auto; 
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.read-post form .title {
+    font-size: 2rem;
+    color: #da6285;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.read-post form .content {
+    line-height: 1.5; 
+    font-size: 1.2rem;
+    color: #333; 
+    padding: 1rem 0;
+}
+
+.read-post form .flexx-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.read-post form .flexx-btn a {
+    height: 3rem; 
+    width: calc(33% - 1rem); 
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #da6285;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.read-post form .flexx-btn a:hover {
+    color: #fff;
+    background-color: #da6285;
+}
+
+.empty {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-transform: capitalize;
+    color: #da6285;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.empty p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.Button {
+    width: 250px; 
+    height: 60px; 
+    padding: 15px 30px; 
+    font-size: 20px; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.Button a {
+    display: block; 
+    position: relative;
+    padding: 12px 36px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #755bea, #ff72c0);
+}
+
+.Button a span {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+/* Define a keyframe animation named 'animate' */
+@keyframes animate {
+    /* At the beginning of the animation (0% progress) */
+    0% {
+        /* Set the width and height of the element to 0 pixels */
+        width: 0px;
+        height: 0px;
+        /* Set the opacity of the element to 0.5 (50% transparency) */
+        opacity: 0.5;
+    }
+    /* At the end of the animation (100% progress) */
+    100% {
+        /* Set the width and height of the element to 500 pixels */
+        width: 500px;
+        height: 500px;
+        /* Set the opacity of the element to 0 (fully transparent) */
+        opacity: 0;
+    }
+}
